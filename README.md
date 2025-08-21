@@ -6,9 +6,8 @@ Example code to use Guzzle oAuth with another provider then one of the big four 
 See: http://github.com/VDMi/Guzzle-oAuth
 
 ```php
-// To use the meetup provider, be sure that Guzzle oAuth is in your autoloader
-// This example just includes.. would be better if it was autoloaded.
-include 'GuzzleOauthMeetUp.php';
+// Make sure the Composer autoloader is loaded
+require 'vendor/autoload.php';
 $config = array(
   // see Guzzle oAuth
 );
