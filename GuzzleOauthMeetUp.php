@@ -19,7 +19,8 @@ class GuzzleOauthMeetUp extends BaseConsumerOauth2 {
       'access_token_path' => 'oauth2/access',
       'param_user_id' => 'id',
     );
-    $config = $meetup_config + $config;
+    // Allow user-provided configuration to override defaults.
+    $config = array_merge($meetup_config, $config);
     return parent::factory($config);
   }
 
